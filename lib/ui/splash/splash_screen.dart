@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/ui/homeScreen/HomeScreen.dart';
+import 'package:islami/ui/myThemeData.dart';
 
 class SplashScreen extends StatelessWidget {
   static const String routeName = "Splash";
@@ -11,7 +12,7 @@ class SplashScreen extends StatelessWidget {
     });
     return Scaffold(
       body: Image.asset(
-        "assets/images/splash.png",
+        MyThemeData.getSplashScreenImage(),
         fit: BoxFit.fill,
         width: double.infinity,
         height: double.infinity,

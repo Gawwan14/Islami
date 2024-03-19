@@ -23,9 +23,7 @@ class TitleWidget extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 12),
         child: Text(
           title,
-          style: TextStyle(
-            fontSize: 24,
-          ),
+          style: Theme.of(context).textTheme.titleMedium,
         ),
       ),
     );

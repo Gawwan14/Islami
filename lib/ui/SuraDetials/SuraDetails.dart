@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami/ui/SuraDetials/verseItem.dart';
 
+import '../myThemeData.dart';
+
 class SuraDetails extends StatefulWidget {
   static const String routeName = "sura-details";
 
@@ -26,7 +28,9 @@ class _SuraDetailsState extends State<SuraDetails> {
       height: double.infinity,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/default_bg.png"),
+          image: AssetImage(
+            MyThemeData.getMainScreenImage(),
+          ),
           fit: BoxFit.fill,
         ),
       ),

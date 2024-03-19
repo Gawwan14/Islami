@@ -4,7 +4,7 @@ import 'package:islami/ui/homeScreen/hadeth/hadeth.dart';
 import 'package:islami/ui/homeScreen/hadeth/hadethTitleWidget.dart';
 
 class HadethTab extends StatefulWidget {
-  const HadethTab({super.key});
+   HadethTab({super.key});
 
   @override
   State<HadethTab> createState() => _HadethTabState();
@@ -35,7 +35,7 @@ class _HadethTabState extends State<HadethTab> {
                   separatorBuilder: (_, __) => Container(
                     height: 1,
                     width: double.infinity,
-                    color: Theme.of(context).primaryColor,
+                    color: Theme.of(context).colorScheme.secondary,
                     margin: EdgeInsets.symmetric(horizontal: 64),
                   ),
                 ),
@@ -50,8 +50,8 @@ class _HadethTabState extends State<HadethTab> {
     List<String> allAhadethContent = fileContent.trim().split("#");
     for (int i = 0; i < allAhadethContent.length; i++) {
       String singleHadeth = allAhadethContent[i].trim();
-      String title = singleHadeth.substring(0, singleHadeth.indexOf("/n"));
-      String content = singleHadeth.substring(singleHadeth.indexOf("/n") + 1);
+      String title = singleHadeth.substring(0, singleHadeth.indexOf("\n"));
+      String content = singleHadeth.substring(singleHadeth.indexOf("\n") + 1);
       Hadeth hadeth = Hadeth(title, content);
       allHadeth.add(hadeth);
     }
