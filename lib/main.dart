@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami/ui/SuraDetials/SuraDetails.dart';
 import 'package:islami/ui/headethDetials/HeadethDetailsScreen.dart';
 import 'package:islami/ui/homeScreen/HomeScreen.dart';
@@ -28,6 +29,8 @@ class MyApp extends StatelessWidget {
         HeadthDetailsScreen.routeName: (_) => HeadthDetailsScreen(),
         SuraDetails.routeName: (_) => SuraDetails(),
       },
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
     );
   }
 }
